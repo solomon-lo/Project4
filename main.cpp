@@ -29,12 +29,13 @@ int main()
 		nameToGPA.associate("Abe", 3.2);
 		nameToGPA.associate("Linda", 3.2);// Abe has a 3.2 GPA
 
+
 		double* davidsGPA = nameToGPA.find("David");
 		if (davidsGPA != nullptr)
 			*davidsGPA = 1.5; // after a re-grade of David’s exam
 		nameToGPA.associate("Carey", 4.0); // Carey deserves a 4.0
 		// replaces old 3.5 GPA
-		double* lindasGPA = nameToGPA.find("Linda");
+		double* lindasGPA = nameToGPA.find("Carey");
 		if (lindasGPA == nullptr)
 			std::cout << "Linda is not in the roster!" << std::endl;
 		else

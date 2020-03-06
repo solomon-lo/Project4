@@ -57,6 +57,7 @@ private:
 template<typename KeyType, typename ValueType>
 ExpandableHashMap<KeyType, ValueType>::ExpandableHashMap(double maximumLoadFactor)
 {
+	m_numOfAssociations = 0;
 	currentLoadFactor = maximumLoadFactor;
 	for (int i = 0; i < 8; i++)
 	{
@@ -78,13 +79,19 @@ void ExpandableHashMap<KeyType, ValueType>::deleteAllNodesInVectorOfNodes()
 {
 	for (int i = 0; i < vectorOfNodes.size(); i++)
 	{
+
 		Node* tempNode = vectorOfNodes[i];
-		while(tempNode->nextNode != nullptr)
+		if (tempNode != nullptr)
 		{
-			Node* killMe = tempNode;
-			tempNode = tempNode->nextNode;
-			delete killMe;
+			while (tempNode->nextNode != nullptr)
+			{
+				Node* killMe = tempNode;
+				tempNode = tempNode->nextNode;
+				delete killMe;
+			}
+			delete vectorOfNodes[i];
 		}
+
 	}
 }
 template<typename KeyType, typename ValueType>
