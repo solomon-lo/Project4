@@ -1,0 +1,21 @@
+﻿  main.cpp
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(123,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(111): message : while compiling class template member function 'void ExpandableHashMap<std::string,double>::associate(const KeyType &,const ValueType &)'
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(111): message :         with
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(111): message :         [
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(111): message :             KeyType=std::string,
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(111): message :             ValueType=double
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(111): message :         ]
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\main.cpp(27): message : see reference to function template instantiation 'void ExpandableHashMap<std::string,double>::associate(const KeyType &,const ValueType &)' being compiled
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\main.cpp(27): message :         with
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\main.cpp(27): message :         [
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\main.cpp(27): message :             KeyType=std::string,
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\main.cpp(27): message :             ValueType=double
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\main.cpp(27): message :         ]
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\main.cpp(23): message : see reference to class template instantiation 'ExpandableHashMap<std::string,double>' being compiled
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(79,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(78): message : while compiling class template member function 'void ExpandableHashMap<std::string,double>::deleteAllNodesInVectorOfNodes(void)'
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(71): message : see reference to function template instantiation 'void ExpandableHashMap<std::string,double>::deleteAllNodesInVectorOfNodes(void)' being compiled
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(59): message : while compiling class template member function 'ExpandableHashMap<std::string,double>::ExpandableHashMap(double)'
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\main.cpp(23): message : see reference to function template instantiation 'ExpandableHashMap<std::string,double>::ExpandableHashMap(double)' being compiled
+  Project4_Draft1.vcxproj -> C:\Users\Solomon Lo\source\repos\Project4_Draft1\Debug\Project4_Draft1.exe
