@@ -35,6 +35,7 @@ public:
 	ExpandableHashMap(const ExpandableHashMap&) = delete;
 	ExpandableHashMap& operator=(const ExpandableHashMap&) = delete;
 
+	//a helper function to delete all of my nodes
 	void deleteAllNodesInVectorOfNodes();
 
 private:

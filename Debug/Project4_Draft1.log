@@ -1,21 +1,8 @@
-﻿  main.cpp
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(130,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(118): message : while compiling class template member function 'void ExpandableHashMap<std::string,double>::associate(const KeyType &,const ValueType &)'
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(118): message :         with
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(118): message :         [
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(118): message :             KeyType=std::string,
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(118): message :             ValueType=double
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(118): message :         ]
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\main.cpp(27): message : see reference to function template instantiation 'void ExpandableHashMap<std::string,double>::associate(const KeyType &,const ValueType &)' being compiled
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\main.cpp(27): message :         with
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\main.cpp(27): message :         [
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\main.cpp(27): message :             KeyType=std::string,
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\main.cpp(27): message :             ValueType=double
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\main.cpp(27): message :         ]
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\main.cpp(23): message : see reference to class template instantiation 'ExpandableHashMap<std::string,double>' being compiled
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(80,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(79): message : while compiling class template member function 'void ExpandableHashMap<std::string,double>::deleteAllNodesInVectorOfNodes(void)'
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(72): message : see reference to function template instantiation 'void ExpandableHashMap<std::string,double>::deleteAllNodesInVectorOfNodes(void)' being compiled
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(59): message : while compiling class template member function 'ExpandableHashMap<std::string,double>::ExpandableHashMap(double)'
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\main.cpp(23): message : see reference to function template instantiation 'ExpandableHashMap<std::string,double>::ExpandableHashMap(double)' being compiled
+﻿  StreetMap.cpp
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(81,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(80): message : while compiling class template member function 'void ExpandableHashMap<GeoCoord,StreetSegment>::deleteAllNodesInVectorOfNodes(void)'
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(73): message : see reference to function template instantiation 'void ExpandableHashMap<GeoCoord,StreetSegment>::deleteAllNodesInVectorOfNodes(void)' being compiled
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(60): message : while compiling class template member function 'ExpandableHashMap<GeoCoord,StreetSegment>::ExpandableHashMap(double)'
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\StreetMap.cpp(32): message : see reference to function template instantiation 'ExpandableHashMap<GeoCoord,StreetSegment>::ExpandableHashMap(double)' being compiled
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\StreetMap.cpp(27): message : see reference to class template instantiation 'ExpandableHashMap<GeoCoord,StreetSegment>' being compiled
   Project4_Draft1.vcxproj -> C:\Users\Solomon Lo\source\repos\Project4_Draft1\Debug\Project4_Draft1.exe
