@@ -24,8 +24,8 @@ public:
 	bool load(string mapFile);
 	bool getSegmentsThatStartWith(const GeoCoord& gc, vector<StreetSegment>& segs) const;
 private:
-	ExpandableHashMap<GeoCoord, StreetSegment> GeoCoordToStreetSegmentHashMap;
-	vector<StreetSegment> vectorOfStreetSegments;
+	ExpandableHashMap<GeoCoord, vector<StreetSegment>> GeoCoordToStreetSegmentHashMap;
+	
 };
 
 StreetMapImpl::StreetMapImpl()
@@ -48,6 +48,11 @@ bool StreetMapImpl::load(string mapFile)
 	string s;
 	while (getline(infile, s))
 	{
+		vector<StreetSegment> vectorOfStreetSegments;
+		vector<StreetSegment> vectorOfReversedStreetSegments;
+		vector<GeoCoord> vectorOfGeoCoords;
+
+
 		StreetSegment tempStreetSegment;
 		StreetSegment reveresedTempStreetSegment;	//the same as tempStreetSegment, but it's actually has switched end and start coordinates
 		tempStreetSegment.name = s;
@@ -60,9 +65,11 @@ bool StreetMapImpl::load(string mapFile)
 		{
 			getline(infile, s);
 			string X_X_ForStartCoord = s.substr(0, s.find(" "));
+			
 			string Y_Y_ForStartCoord = s.substr(s.find(" ") + 1, s.find(" "));
 
 			GeoCoord startGeoCoord(X_X_ForStartCoord, Y_Y_ForStartCoord);
+			vectorOfGeoCoords.push_back(startGeoCoord);
 			tempStreetSegment.start = startGeoCoord;
 			reveresedTempStreetSegment.end = startGeoCoord;
 
@@ -74,28 +81,56 @@ bool StreetMapImpl::load(string mapFile)
 			GeoCoord endGeoCoord(X_X_ForEndingCoord, Y_Y_ForEndingCoord);
 			tempStreetSegment.end = endGeoCoord;
 			reveresedTempStreetSegment.start = endGeoCoord;
+			
+			vectorOfGeoCoords.push_back(endGeoCoord);
 
 			vectorOfStreetSegments.push_back(tempStreetSegment);
-			vectorOfStreetSegments.push_back(reveresedTempStreetSegment);
+			vectorOfReversedStreetSegments.push_back(reveresedTempStreetSegment);
 		}
 
+
+		for (int i = 0; i < numOfSegmentsOnStreet + 1; i++)
+		{
+			vector<StreetSegment> tempVectorOfStreetSegments;
+			if (i == 0)
+			{
+				
+				tempVectorOfStreetSegments.push_back(vectorOfStreetSegments[1]);
+				GeoCoordToStreetSegmentHashMap.associate(vectorOfGeoCoords[0], tempVectorOfStreetSegments);
+			}
+			else if (i > 0 && i < numOfSegmentsOnStreet)
+			{
+				tempVectorOfStreetSegments.push_back(vectorOfStreetSegments[i]);
+				tempVectorOfStreetSegments.push_back(vectorOfReversedStreetSegments[i - 1]);
+				GeoCoordToStreetSegmentHashMap.associate(vectorOfGeoCoords[i], tempVectorOfStreetSegments);
+
+			}
+			else
+			{
+				tempVectorOfStreetSegments.push_back(vectorOfReversedStreetSegments[i]);
+			}
+
+		}
+
+
 	}
+	cerr << "reached return true on load" << endl;
 	return true;	//if everything works to plan , this will return true since it reaches end of the text file.
 
 }
 
 bool StreetMapImpl::getSegmentsThatStartWith(const GeoCoord& gc, vector<StreetSegment>& segs) const
 {
-	for (int i = 0; i < vectorOfStreetSegments.size(); i++)
-	{
-		bool foundAtLeastOneMatchingSegment = false;
-		if (vectorOfStreetSegments[i].start == gc)
-		{
-			segs.push_back(vectorOfStreetSegments[i]);
-			foundAtLeastOneMatchingSegment = true;
-		}
-		return foundAtLeastOneMatchingSegment;
-	}
+	//for (int i = 0; i < vectorOfStreetSegments.size(); i++)
+	//{
+	//	bool foundAtLeastOneMatchingSegment = false;
+	//	if (vectorOfStreetSegments[i].start == gc)
+	//	{
+	//		segs.push_back(vectorOfStreetSegments[i]);
+	//		foundAtLeastOneMatchingSegment = true;
+	//	}
+	//	return foundAtLeastOneMatchingSegment;
+	//}
 }
 
 //******************** StreetMap functions ************************************

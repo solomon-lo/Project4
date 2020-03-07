@@ -1,8 +1,30 @@
 ﻿  StreetMap.cpp
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(81,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(80): message : while compiling class template member function 'void ExpandableHashMap<GeoCoord,StreetSegment>::deleteAllNodesInVectorOfNodes(void)'
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(73): message : see reference to function template instantiation 'void ExpandableHashMap<GeoCoord,StreetSegment>::deleteAllNodesInVectorOfNodes(void)' being compiled
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(60): message : while compiling class template member function 'ExpandableHashMap<GeoCoord,StreetSegment>::ExpandableHashMap(double)'
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\StreetMap.cpp(32): message : see reference to function template instantiation 'ExpandableHashMap<GeoCoord,StreetSegment>::ExpandableHashMap(double)' being compiled
-C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\StreetMap.cpp(27): message : see reference to class template instantiation 'ExpandableHashMap<GeoCoord,StreetSegment>' being compiled
-  Project4_Draft1.vcxproj -> C:\Users\Solomon Lo\source\repos\Project4_Draft1\Debug\Project4_Draft1.exe
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(131,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(119): message : while compiling class template member function 'void ExpandableHashMap<GeoCoord,std::vector<StreetSegment,std::allocator<_Ty>>>::associate(const KeyType &,const ValueType &)'
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(119): message :         with
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(119): message :         [
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(119): message :             _Ty=StreetSegment,
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(119): message :             KeyType=GeoCoord,
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(119): message :             ValueType=std::vector<StreetSegment,std::allocator<StreetSegment>>
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(119): message :         ]
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\StreetMap.cpp(99): message : see reference to function template instantiation 'void ExpandableHashMap<GeoCoord,std::vector<StreetSegment,std::allocator<_Ty>>>::associate(const KeyType &,const ValueType &)' being compiled
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\StreetMap.cpp(99): message :         with
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\StreetMap.cpp(99): message :         [
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\StreetMap.cpp(99): message :             _Ty=StreetSegment,
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\StreetMap.cpp(99): message :             KeyType=GeoCoord,
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\StreetMap.cpp(99): message :             ValueType=std::vector<StreetSegment,std::allocator<StreetSegment>>
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\StreetMap.cpp(99): message :         ]
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\StreetMap.cpp(27): message : see reference to class template instantiation 'ExpandableHashMap<GeoCoord,std::vector<StreetSegment,std::allocator<_Ty>>>' being compiled
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\StreetMap.cpp(27): message :         with
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\StreetMap.cpp(27): message :         [
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\StreetMap.cpp(27): message :             _Ty=StreetSegment
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\StreetMap.cpp(27): message :         ]
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(135,1): error C2872: 'hash': ambiguous symbol
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\StreetMap.cpp(14,14): message : could be 'unsigned int hash(const GeoCoord &)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\type_traits(2137,1): message : or       'std::hash'
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(141,1): error C2872: 'hash': ambiguous symbol
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\StreetMap.cpp(14,14): message : could be 'unsigned int hash(const GeoCoord &)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\type_traits(2137,1): message : or       'std::hash'
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\ExpandableHashMap.h(153,1): error C2872: 'hash': ambiguous symbol
+C:\Users\Solomon Lo\source\repos\Project4_Draft1\Project4_Draft1\StreetMap.cpp(14,14): message : could be 'unsigned int hash(const GeoCoord &)'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\type_traits(2137,1): message : or       'std::hash'
